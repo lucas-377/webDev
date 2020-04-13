@@ -1,0 +1,26 @@
+/* Explicita o tipo de formatação dos caracteres */
+@charset "UTF-8";
+
+body
+{
+    background-color: white;
+    color: black;
+}
+
+p
+{
+    text-align: justify;
+    text-indent: 50px;
+}
+
+/* Formatação do Menu */
+nav#menu ul
+{
+    list-style: none;
+    text-transform: uppercase;
+}
+
+nav#menu li
+{
+    display: inline;
+}

@@ -14,13 +14,46 @@ p
 }
 
 /* Formatação do Menu */
+nav#menu
+{
+    display: block;
+}
+
+nav#menu a
+{
+    color: #5e4242;
+    text-decoration: none;
+}
+
+nav#menu a:hover
+{
+    color: #ffffff;
+}
+
+nav#menu h1
+{
+    display: none;
+}
+
 nav#menu ul
 {
     list-style: none;
     text-transform: uppercase;
+    position: absolute;
+    top: 0px;
+    left: 100px;
 }
 
 nav#menu li
 {
-    display: inline;
+    display: inline-block;
+    background-color: #dddddd;
+    padding: 10px;
+    margin: 2px;
+    transition: background-color 1s;
+}
+
+nav#menu li:hover
+{
+    background-color: #c4c4c4;
 }

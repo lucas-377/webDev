@@ -1,32 +1,31 @@
-<!-- Criado por Lucas Santana em 2020 -->
-
-<!-- Especifica o HTML 5 -->
 <!DOCTYPE html>
 
 <html lang="pt-br">
-	<head>
-		<!-- Explicita o tipo de formatação dos caracteres -->
-		<meta charset="UTF-8"/>
-		
-		<!-- Linka o arquivo de estilo ao html -->
-		<link rel="stylesheet" href="_css/estilo.css"/> 
 
-		<title> Home </title>
-	</head>
-	
-	<body>		
-		<div id="interface">
-			<header id="cabecalho">
-				<nav id="menu">
-					<h1>Menu Principal</h1>
-					<ul>
-						<li><a href="index.html">Inicio</a></li>
-						<li><a href="sobre.html">Sobre Mim</a></li>
-						<li><a href="planejamento.html">Planejamento</a></li>
-						<li><a href="contato.html">Contato</a></li>
-					</ul>
-				</nav>
-			</header>
-		</div>
-	</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Home</title>
+        <link rel="stylesheet" href="_css/main.css" />
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    </head>
+
+    <body>
+        <nav>
+            <input type="checkbox" id="check" />
+
+            <label for="check" class="botaocheck">
+                <i class="fas fa-bars"></i>
+            </label>
+
+            <label class="logotipo">Lucas Santana</label>
+
+            <ul>
+                <li><a class="ativo" href="#">Inicio</a></li>
+                <li><a href="#">Sobre Mim</a></li>
+                <li><a href="#">Planejamento</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </body>
 </html>

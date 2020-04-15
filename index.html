@@ -20,39 +20,41 @@
     </head>
 
     <body>
-        <header class="cabecalho">
-            <picture id="logo">
-                <a href="index.html"><img src="_imagens/logo.png" width="50px" height="50px"/></a>
-            </picture><!-- Logo -->
+        <div class="container">
+            <header class="cabecalho">
+                <nav id="menu">
+                    <!-- Cria uma caixa de seleção -->
+                    <input type="checkbox" id="check" />
 
-            <nav id="menu">
-                <!-- Cria uma caixa de seleção -->
-                <input type="checkbox" id="check" />
+                    <!-- Relaciona o icone "barras" a caixa selecionavel -->
+                    <label for="check" class="botaocheck">
+                        <i class="fas fa-bars"></i>
+                    </label>
 
-                <!-- Relaciona o icone "barras" a caixa selecionavel -->
-                <label for="check" class="botaocheck">
-                    <i class="fas fa-bars"></i>
-                </label>
+                    <picture id="logo">
+                        <img src="_imagens/logo.png" width="50px" height="50px" alt="Logo LS"/>
+                    </picture><!-- Logo -->
+                
+                    <!-- Insere o texto do logo -->
+                    <label class="logotipo">Lucas Santana</label>
 
-                <!-- Insere o texto do logo -->
-                <label class="logotipo">Lucas Santana</label>
+                    <ul>
+                        <li><a class="ativo" href="#">Inicio</a></li>
+                        <li><a href="#">Sobre Mim</a></li>
+                        <li><a href="#">Planejamento</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </nav><!-- Menu -->
+            </header><!-- Cabeçalho -->
 
-                <ul>
-                    <li><a class="ativo" href="#">Inicio</a></li>
-                    <li><a href="#">Sobre Mim</a></li>
-                    <li><a href="#">Planejamento</a></li>
-                    <li><a href="#">Contato</a></li>
-                </ul>
-            </nav><!-- Menu -->
-        </header><!-- Cabeçalho -->
-
-        <div class="principal">
-            <section id="topo">
-                <div>
+            <div id="banner">
+                <div id="conteudo-banner">
                     <h1>Olá, Mundo!</h1>
-                    <p>Aqui vai um site bom com menu responsivo e os caralho a 4 do html 5 e css3, bom pra um caralho!Aqui vai um site bom com menu responsivo e os caralho a 4 do html 5 e css3, bom pra um caralho!Aqui vai um site bom com menu responsivo e os caralho a 4 do html 5 e css3, bom pra um caralho!Aqui vai um site bom com menu responsivo e os caralho a 4 do html 5 e css3, bom pra um caralho!Aqui vai um site bom com menu responsivo e os caralho a 4 do html 5 e css3, bom pra um caralho!Aqui vai um site bom com menu responsivo e os caralho a 4 do html 5 e css3, bom pra um caralho!Aqui vai um site bom com menu responsivo e os caralho a 4 do html 5 e css3, bom pra um caralho!Aqui vai um site bom com menu responsivo e os caralho a 4 do html 5 e css3, bom pra um caralho!Aqui vai um site bom com menu responsivo e os caralho a 4 do html 5 e css3, bom pra um caralho!Aqui vai um site bom com menu responsivo e os caralho a 4 do html 5 e css3, bom pra um caralho!Aqui vai um site bom com menu responsivo e os caralho a 4 do html 5 e css3, bom pra um caralho!Aqui vai um site bom com menu responsivo e os caralho a 4 do html 5 e css3, bom pra um caralho!</p>
-                </div>
-            </section><!-- Topo -->
-        </div><!-- Principal -->
+                    <p>Esse site, foi criado com o intuito de desenvolver habilidades e aprender mais sobre o desenvolvimento front-end com HTML5 e CSS3.
+                    Apliquei técnicas de responsividade, para compatibilidade com diversos dispositivos e menu fixo para facilitar a navegação.
+                    </p>
+                </div><!-- Conteudo Banner -->
+            </div><!-- Banner -->
+        </div><!-- Container -->
     </body>
 </html>

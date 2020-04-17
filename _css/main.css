@@ -36,7 +36,16 @@ Configurações Gerais.
     b. Divisão do Banner.
     c. Conteudo do Banner.
 
-4. Responsividade Geral.
+4. Rodapé.
+    a. Caixas.
+    b. Logo.
+    c. Listas.
+    d. Mapa do Site.
+    e. Direitos Autorais.
+
+5. Responsividade.
+    a. Tablets.
+    b. Smartphones.
 ========================================================================== */
 
 /* ==========================================================================
@@ -82,12 +91,6 @@ nav#menu {
     height: 80px;
     width: 100%;
     z-index: 1;
-}
-
-nav#menu:after {
-    clear: both;
-    content: "";
-    display: block;
 }
 
 /* Lista.
@@ -173,21 +176,115 @@ div#conteudo-banner {
     text-align: center;
 }
 
+/* Interface.
+========================================================================== */
+.interface {
+    max-width: 1200px;
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* ==========================================================================
+Rodapé.
+========================================================================== */
+footer#rodape {
+    width: 100%;
+    background-color: #000000;
+    padding-top: 5em;
+    padding-bottom: 40px;
+    position: relative;
+}
+
+footer#rodape h2, #rodape p {
+    color: #ffffff;
+}
+
+/* Caixas.
+========================================================================== */
+.caixa-rodape {
+    width: 33.33%;
+    padding: 1%;
+    float: left;
+}
+
+#rodape:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+/* Logo.
+========================================================================== */
+.logo-rodape {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.logo-rodape h2 {
+    margin-top: 20px;
+}
+
+/* Listas.
+========================================================================== */
+.lista-rodape li {
+    margin-top: 5px;
+}
+
+.lista-rodape a {
+    color: #ffffff;
+    transition: .5s;
+}
+
+.lista-rodape a:hover {
+    color: #e60000;
+}
+
+.lista-rodape li:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+.fab {
+    font-size: 17px;
+    margin-right: 10px;
+    float: left;
+}
+
+/* Mapa Site.
+========================================================================== */
+.mapa-site {
+    text-align: right;
+}
+
+.mapa-site ul li a span {
+    height: 20px;
+    line-height: 20px;
+}
+
+/* Direitos Autorais.
+========================================================================== */
+.direitos-autorais {
+    width: 100%;
+    background-color: #160707;
+    position: relative;
+    text-align: center;
+    color: #ffffff;
+}
+
+.direitos-autorais p {
+    height: 50px;
+    line-height: 50px;
+}
+
 /* ==========================================================================
 Responsividade.
 ========================================================================== */
 
-@media (max-width: 818px) {
-    label.logotipo {
-        font-size: 20px;
-        padding-left: 10px;
-    }
-
-    nav#menu ul li a {
-        font-size: 13px;
-    }
-}
-
+/* Tablets e Smartphones.
+========================================================================== */
 @media (max-width: 794px) {
     .botaocheck {
         display: block;
@@ -228,5 +325,22 @@ Responsividade.
 
     #check:checked ~ ul {
         left: 0;
+    }
+}
+
+/* Smartphones.
+========================================================================== */
+@media (max-width: 485px) {
+    picture#logo {
+        float: left;
+        position: relative;
+        top: 13px;
+        margin-left: 0px;
+        padding-left: 30px;
+    }
+
+    label.logotipo {
+        font-size: 20px;
+        padding-left: 10px;
     }
 }

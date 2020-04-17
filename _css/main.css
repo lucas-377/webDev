@@ -67,7 +67,7 @@ Menu de Navegação.
 ========================================================================== */
 picture#logo {
     position: relative;
-    vertical-align: middle;
+    top: 15px;
     padding-left: 100px;
 }
 
@@ -163,6 +163,7 @@ div#banner {
     background: url('../_imagens/banner.png') no-repeat;
     background-size: cover;
     position: relative;
+    background-position: 0 25%;
 }
 
 /* Conteudo do Banner.
@@ -172,7 +173,7 @@ div#conteudo-banner {
     width: 80%;
     margin: 0 auto;
     padding-top: 2em;
-    padding-bottom: 22em;
+    padding-bottom: 27.5em;
     text-align: center;
 }
 
@@ -260,8 +261,8 @@ footer#rodape h2, #rodape p {
 }
 
 .mapa-site ul li a span {
-    height: 20px;
-    line-height: 20px;
+    height: 22px;
+    line-height: 22px;
 }
 
 /* Direitos Autorais.
@@ -286,6 +287,10 @@ Responsividade.
 /* Tablets e Smartphones.
 ========================================================================== */
 @media (max-width: 794px) {
+    div#banner {
+        background-position: center;
+    }
+
     .botaocheck {
         display: block;
     }
@@ -293,8 +298,8 @@ Responsividade.
     picture#logo {
         float: left;
         position: relative;
-        top: 13px;
-        margin-left: 50px;
+        top: 15px;
+        margin-left: 1em;
     }
 
     label.logotipo {
@@ -334,9 +339,9 @@ Responsividade.
     picture#logo {
         float: left;
         position: relative;
-        top: 13px;
+        top: 15px;
         margin-left: 0px;
-        padding-left: 30px;
+        padding-left: 2em;
     }
 
     label.logotipo {

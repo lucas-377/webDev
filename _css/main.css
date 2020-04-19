@@ -71,14 +71,23 @@ picture#logo {
     padding-left: 100px;
 }
 
+picture#logo a {
+    border: none!important;
+}
+
 /* Logotipo.
 ========================================================================== */
-label.logotipo {
+label.logotipo a {
     color: #ffffff;
     font-size: 20px;
     line-height: 80px;
     padding: 0 10px;
     font-weight: bold;
+    border: none!important;
+}
+
+label.logotipo a:hover {
+    color: #ffffff!important;
 }
 
 /* Menu.

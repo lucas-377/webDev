@@ -130,8 +130,8 @@ nav#menu ul li a {
 /* Link ativo e Mouse sobre.
 ========================================================================== */
 nav#menu a.ativo, nav#menu a:hover {
-    border: 1px solid #e60000;
-    color: #e60000;
+    border: 1px solid #808080;
+    color: #808080;
     transition: .5s;
 }
 
@@ -157,12 +157,20 @@ nav#menu a.ativo, nav#menu a:hover {
 Corpo do Site.
 ========================================================================== */
 
+/* Titulos Centralizados.
+========================================================================== */
+.titulo-center {
+    text-align: center;
+    padding-bottom: 15px;
+}
+
 /* Divisão Principal.
 ========================================================================== */
 div.container {
     max-width: 1980px;
     width: 100%;
     margin: 0 auto;
+    background-color: #0d0d0d;
 }
 
 /* Banner.
@@ -179,20 +187,109 @@ div#banner {
 ========================================================================== */
 div#conteudo-banner {
     position: relative;
-    width: 80%;
+    width: 50%;
     margin: 0 auto;
     padding-top: 2em;
     padding-bottom: 27.5em;
     text-align: center;
 }
 
+div#conteudo-banner p {
+    line-height: 23px;
+}
+
 /* Interface.
 ========================================================================== */
 .interface {
     max-width: 1200px;
-    width: 80%;
     margin: 0 auto;
     position: relative;
+    margin-top: 80px;
+    padding: 2em 2em;
+    background-color: cornsilk;
+}
+
+/* ==========================================================================
+Página Sobre Mim.
+========================================================================== */
+
+/* Foto do Perfil.
+========================================================================== */
+#foto {
+    background: url('../_imagens/foto-perfil.jpg') no-repeat;
+    width: 300px;
+    height: 300px;
+    border-radius: 150px;
+    background-size: contain;
+    position: relative;
+    float: left;
+    margin-right: 2%;
+    clear: both;
+}
+
+/* Dados do Perfil.
+========================================================================== */
+#dados {
+    padding-top: 30px;
+    position: relative;
+    clear: right;
+    margin-bottom: 5em;
+}
+
+/* Blocos da Interface.
+========================================================================== */
+.blocos {
+    background-color: #e6e6e6;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    position: relative;
+}
+
+/* Divisão do Resumo.
+========================================================================== */
+#p-resumo {
+    width: 72%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Divisão das Habilidades.
+========================================================================== */
+.blocos ul li {
+    display: inline-block;
+    width: 49.4%;
+    text-align: center;
+    position: relative;
+    padding-top: 1em;
+    font-weight: bold;
+}
+
+.blocos ul li:nth-child(1), .blocos ul li:nth-child(3), .blocos ul li:nth-child(5) {
+    border-right: 1px solid black;
+}
+
+.blocos ul li:nth-child(5) {
+    padding-bottom: 15px;
+}
+
+.blocos ul li span {
+    font-size: large;
+}
+
+progress {
+    width: 70%;
+    height: 30px;
+    color: #808080;
+    background: #0d0d0d;
+}
+
+::-webkit-progress-bar {
+    background: #0d0d0d;
+}
+
+::-webkit-progress-value {
+    background: #808080;
 }
 
 /* ==========================================================================
@@ -204,6 +301,7 @@ footer#rodape {
     padding-top: 5em;
     padding-bottom: 40px;
     position: relative;
+    clear: both;
 }
 
 footer#rodape h2, #rodape p {
@@ -248,7 +346,7 @@ footer#rodape h2, #rodape p {
 }
 
 .lista-rodape a:hover {
-    color: #e60000;
+    color: #808080;
 }
 
 .lista-rodape li:after {
@@ -257,9 +355,7 @@ footer#rodape h2, #rodape p {
     display: block;
 }
 
-.fab {
-    font-size: 17px;
-    margin-right: 10px;
+#lista-redes {
     float: left;
 }
 
@@ -269,16 +365,15 @@ footer#rodape h2, #rodape p {
     text-align: right;
 }
 
-.mapa-site ul li a span {
-    height: 22px;
-    line-height: 22px;
+#lista-mapa {
+    float: right;
 }
 
 /* Direitos Autorais.
 ========================================================================== */
 .direitos-autorais {
     width: 100%;
-    background-color: #160707;
+    background-color: #0d0d0d;
     position: relative;
     text-align: center;
     color: #ffffff;
@@ -320,7 +415,7 @@ Responsividade.
         position: fixed;
         width: 100%;
         height: 100vh;
-        background: #160707;
+        background: #0d0d0d;
         top: 80px;
         left: -100%;
         text-align: center;

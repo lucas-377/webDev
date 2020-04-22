@@ -44,70 +44,40 @@
 
                     <ul>
                         <li><a href="index.html">Início</a></li>
-                        <li><a class="ativo" href="sobre.html">Sobre Mim</a></li>
+                        <li><a href="sobre.html">Sobre Mim</a></li>
                         <li><a href="#">Planejamento</a></li>
-                        <li><a href="contato.html">Contato</a></li>
+                        <li><a class="ativo" href="contato.html">Contato</a></li>
                     </ul>
                 </nav><!-- Menu -->
             </header><!-- Cabeçalho -->
 
             <main class="interface">
-                <div id="foto">
-                </div><!-- Foto -->
-
-                <div id="dados">
-                    <h1>Lucas Santana</h1>
-                    <p>
-                        Amante da tecnologia e estudante de Sistemas de Informação na Universidade Tecnológica do Paraná (UTFPR).
-                    </p>
-
-                    <br />
-                    <h4><i class="fas fa-map-marker-alt"></i> Curitiba / PR</h4>
-                    <br />
-
-                    <p>
-                        27 anos, natural de Arujá / SP. Gosto de música, aventuras ao ar livre, levar uma vida simples e estar em constante evolução. Atualmente no cenário de pandemia, estou desenvolvendo um sistema acadêmico em linguagem C++ orientada a objetos, finalizando este site pessoal em HTML5 e CSS3, estudando estruturas de dados e outras disciplinas da universidade de forma autodidata. Futuramente, desenvolverei um jogo de plataforma, utilizando linguagem C++ com biblioteca gráfica SFML, pretendo aperfeiçoar este site ao estudar e desenvolver habilidades com JavaScript.
-                    </p>
-                </div>
-
-                <div class="blocos">
-                    <h1 class="titulo-center">Resumo</h1>
-                    <p id="p-resumo">
-                        Atuei nas areas de TI e Publicidade como Suporte Técnico, Desenvolvedor, Designer Gráfico e Web Designer.
-                        Acompanhei implantações e melhorias de sistemas e portais digitais, montagem de redes lógicas e físicas, instalação de computadores e impressoras para credenciamento em feiras e eventos de grande porte.
-                    </p>
-                </div>
-
-                <div class="blocos">
-                    <h1 class="titulo-center">Habilidades</h1>
-                    <ul>
-                        <li>
-                            <span>Linguagem C</span> <br />
-                            <progress min="0" max="100" value="90"></progress>
-                        </li>
-
-                        <li>
-                            <span>Linguagem C++</span> <br />
-                            <progress min="0" max="100" value="70"></progress>
-                        </li>
-
-                        <li>
-                            <span>Linguagem Python 3</span> <br />
-                            <progress min="0" max="100" value="40"></progress>
-                        </li>
-
-                        <li>
-                            <span>HTML 5</span> <br />
-                            <progress min="0" max="100" value="40"></progress>
-                        </li>
-
-                        <li>
-                            <span>CSS 3</span> <br />
-                            <progress min="0" max="100" value="50"></progress>
-                        </li>
-                    </ul>
-                    
-                </div><!-- Blocos -->
+                <div id="formulario">
+                    <form name="dados-contato" style="margin: 0 auto;">
+    
+                        <h1>Entre em contato</h1>
+                
+                        <p class="nome">
+                            <input type="text" id="nomeid" placeholder="Lucas Santana" required="required" name="nome" />
+                            <label for="nome">Nome</label>
+                        </p>
+                        <p class="fone">
+                            <input type="text" id="foneid" placeholder="(xx)xx-xx-xx-xx" name="fone" />
+                            <label for="fone">Fone</label>
+                
+                        </p>
+                        <p>
+                            <input type="email" id="emailid" placeholder="fulano@email.com" name="email" />
+                            <label for="email">Email</label>
+                        </p>
+                        <p>
+                            <textarea placeholder="Deixe sua opnião"></textarea>
+                        </p>
+                        <p class="submit">
+                            <input type="submit" onclick="Enviar();" value="Enviar" />
+                        </p>
+                    </form><!-- Dados Contato -->
+                </div><!-- Formulário -->
             </main><!-- Interface -->
 
             <footer id="rodape">

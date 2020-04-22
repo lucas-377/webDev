@@ -217,9 +217,9 @@ Página Sobre Mim.
 ========================================================================== */
 #foto {
     background: url('../_imagens/foto-perfil.jpg') no-repeat;
-    width: 300px;
-    height: 300px;
-    border-radius: 150px;
+    width: 250px;
+    height: 250px;
+    border-radius: 125px;
     background-size: contain;
     position: relative;
     float: left;
@@ -230,7 +230,6 @@ Página Sobre Mim.
 /* Dados do Perfil.
 ========================================================================== */
 #dados {
-    padding-top: 30px;
     position: relative;
     clear: right;
     margin-bottom: 5em;
@@ -388,13 +387,10 @@ footer#rodape h2, #rodape p {
 Responsividade.
 ========================================================================== */
 
-/* Tablets e Smartphones.
+/* Tablets.
 ========================================================================== */
-@media (max-width: 794px) {
-    div#banner {
-        background-position: center;
-    }
-
+@media screen and (max-width: 768px) {
+    /* Menu Responsivo */
     .botaocheck {
         display: block;
     }
@@ -435,21 +431,90 @@ Responsividade.
     #check:checked ~ ul {
         left: 0;
     }
+
+    /* Home Page */
+    div#banner {
+        background-position: center;
+    }
+
+    div#conteudo-banner {
+        width: 70%;
+        padding-top: 1em;
+    }
+
+    /* Sobre Mim */
+    div#foto {
+        float: none;
+        margin: 0 auto;
+    }
+
+    div#dados {
+        padding-top: 30px;
+        margin-bottom: 2em;
+        text-align: center;
+    }
+
+    div#dados h1 {
+        margin-bottom: 10px;
+    }
+
 }
 
 /* Smartphones.
 ========================================================================== */
-@media (max-width: 485px) {
-    picture#logo {
-        float: left;
-        position: relative;
-        top: 15px;
-        margin-left: 0px;
-        padding-left: 2em;
+@media screen and (max-width: 576px) {
+    html, body {
+        overflow-x: hidden;
     }
 
-    label.logotipo {
-        font-size: 20px;
+    picture#logo {
         padding-left: 10px;
+    }
+
+    /* Home Page */
+    div#conteudo-banner {
+        width: 80%;
+    }
+
+    div#conteudo-banner p {
+        line-height: 20px;
+    }
+
+    /* Sobre Mim */
+     p#p-resumo {
+        width: 99%;
+        text-align: center;
+    }
+
+    div.blocos ul li {
+        width: 99%;
+        border: none!important;
+    }
+
+    div.logo-rodape img{
+        width: 50px;
+        height: 50px;
+    }
+
+    div.logo-rodape h2 {
+        margin-top: 10px;
+    }
+
+    div.logo-rodape p {
+        font-size: small;
+    }
+
+    div.caixa-rodape h2{
+        font-size: 18px;
+    }
+    
+    div.caixa-rodape li {
+        font-size: 15px;
+    }
+
+    div.direitos-autorais p {
+        height: 25px;
+        line-height: 25px;
+        font-size: small;
     }
 }

@@ -32,11 +32,27 @@ Configurações Gerais.
     i. Caixa de Seleção.
 
 3. Corpo.
-    a. Divisão Container(Principal).
-    b. Divisão do Banner.
-    c. Conteudo do Banner.
+    a. Titulos Centralizados.
+    b. Divisão Container(Principal).
+    c. Divisão do Banner.
+    d. Conteudo do Banner.
 
-4. Rodapé.
+4. Página Sobre Mim.
+    a. Interface.
+    b. Foto do Perfil.
+    c. Dados do Perfil.
+    d. Blocos da Interface.
+    e. Divisão do Resumo.
+    f. Divisão das Habilidades.
+
+5. Página Contato.
+    a. Formulário.
+    b. Botão.
+
+6. Página Planejamento.
+    a. Tabela.
+
+7. Rodapé.
     a. Caixas.
     b. Logo.
     c. Listas.
@@ -295,6 +311,8 @@ progress {
 /* ==========================================================================
 Página Contato.
 ========================================================================== */
+/* Formulário.
+========================================================================== */
 form {
     font-family: Verdana,Tahoma,sans-serif;
     font-size: 15px;
@@ -321,6 +339,8 @@ form textarea {
     max-width: 400px;
 }
 
+/* Botão.
+========================================================================== */
 .submit input {
     background-color: #66FFFF;
     height: 40px;
@@ -328,6 +348,53 @@ form textarea {
     font-weight: bold;
     border-radius: 5px;
     border: 1px solid #808080;
+}
+
+/* ==========================================================================
+Página Planejamento.
+========================================================================== */
+/* Tabela.
+========================================================================== */
+#tabela {
+    border: 2px solid #808080;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px 0;
+}
+
+#titulo {
+    background: blanchedalmond;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 7px;
+}
+
+#planejamento {
+    margin: 0 auto;
+    border-spacing: 0;
+    border: 1px solid black;
+}
+
+#planejamento td {
+    border: 1px solid black;
+    padding: 4px;
+}
+
+.dias {
+    font-weight: bold;
+    color: white;
+    background: black;
+}
+
+.horario {
+    color: white;
+    background: black;
+}
+
+.rango {
+    background: #1a1a1a;
+    color: #ffffff;
 }
 
 /* ==========================================================================
@@ -497,6 +564,11 @@ Responsividade.
         margin-bottom: 10px;
     }
 
+    /* Planejamento */
+    #planejamento {
+        width: 70%;
+    }
+
 }
 
 /* Smartphones.
@@ -530,6 +602,13 @@ Responsividade.
         border: none!important;
     }
 
+    /* Planejamento */
+    #planejamento {
+        width: 80%;
+        font-size: 8px;
+    }
+
+    /* Rodape */
     div.logo-rodape img{
         width: 50px;
         height: 50px;

@@ -1,0 +1,280 @@
+<!-- Criado por Lucas Santana -->
+
+<!-- Define o tipo do documento -->
+<!DOCTYPE html>
+
+<html lang="pt-br"> <!-- Define a lingua português do Brasil -->
+
+    <head>
+        <meta charset="UTF-8" /> <!-- Tipo de caracteres latino -->
+
+        <!-- Ajusta a visualização do conteudo, de acordo com o tamanho da janela -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Sobre</title>
+
+        <link rel="stylesheet" href="_css/main.css" />
+
+        <!-- Biblioteca de icones -->
+        <script src="https://kit.fontawesome.com/6965183d02.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <header class="cabecalho">
+                <nav id="menu">
+                    <!-- Cria uma caixa de seleção -->
+                    <input type="checkbox" id="check" />
+
+                    <!-- Relaciona o icone "barras" a caixa selecionavel -->
+                    <label for="check" class="botaocheck">
+                        <i class="fas fa-bars"></i>
+                    </label>
+
+                    <picture id="logo">
+                        <a href="index.html">
+                        <img src="_imagens/logo.png" width="50px" height="50px" alt="Logo LS."/>
+                        </a>
+                    </picture><!-- Logo -->
+                
+                    <!-- Insere o texto do logo -->
+                    <label class="logotipo">
+                        <a href="index.html">Lucas Santana</a>
+                    </label>
+
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="sobre.html">Sobre Mim</a></li>
+                        <li><a class="ativo" href="planejamento.html">Planejamento</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </nav><!-- Menu -->
+            </header><!-- Cabeçalho -->
+
+            <main class="interface">
+                <div id="tabela">
+                    <table id="planejamento">
+                        <caption id="titulo">ORGANOGRAMA</caption>
+
+                        <tr class="dias">
+                            <td></td>
+                            <td>SEG</td>
+                            <td>TER</td>
+                            <td>QUA</td>
+                            <td>QUI</td>
+                            <td>SEX</td>
+                            <td>SAB</td>
+                            <td>DOM</td>
+                        </tr>
+
+                        <tr>
+                            <td class="horario">7:00</td>
+                            <td colspan="7" class="rango">CAFE DA MANHA</td>
+                        </tr>
+
+                        <tr>
+                            <td class="horario">8:00</td>
+                            <td>Logica</td>
+                            <td>TecProg</td>
+                            <td>Logica</td>
+                            <td>TecProg</td>
+                            <td>Logica</td>
+                            <td>Revisao</td>
+                            <td>Revisao</td>
+                        </tr>
+
+                        <tr>
+                            <td class="horario">9:00</td>
+                            <td>Logica</td>
+                            <td>TecProg</td>
+                            <td>Logica</td>
+                            <td>TecProg</td>
+                            <td>Logica</td>
+                            <td>Revisao</td>
+                            <td>Revisao</td>
+                        </tr>
+
+                        <tr>
+                            <td class="horario">10:00</td>
+                            <td>Mat Basica</td>
+                            <td>TecProg</td>
+                            <td>Mat Basica</td>
+                            <td>TecProg</td>
+                            <td>Mat Basica</td>
+                            <td>HTML / CSS</td>
+                            <td>HTML / CSS</td>
+                        </tr>
+
+                        <tr>
+                            <td class="horario">11:00</td>
+                            <td>Mat Basica</td>
+                            <td>TecProg</td>
+                            <td>Mat Basica</td>
+                            <td>TecProg</td>
+                            <td>Mat Basica</td>
+                            <td>HTML / CSS</td>
+                            <td>HTML / CSS</td>
+                        </tr>
+
+                        <tr>
+                            <td class="horario">12:00</td>
+                            <td colspan="7" class="rango">ALMOÇO</td>
+                        </tr>
+
+                        <tr>
+                            <td class="horario">13:00</td>
+                            <td>Calculo 1</td>
+                            <td>Est Dados</td>
+                            <td>Calculo 1</td>
+                            <td>Est Dados</td>
+                            <td>Calculo 1</td>
+                            <td>Limpar Terreno</td>
+                            <td>Livre</td>
+                        </tr>
+
+                        <tr>
+                            <td class="horario">14:00</td>
+                            <td>Calculo 1</td>
+                            <td>Est Dados</td>
+                            <td>Calculo 1</td>
+                            <td>Est Dados</td>
+                            <td>Calculo 1</td>
+                            <td>Livre</td>
+                            <td>Livre</td>
+                        </tr>
+
+                        <tr>
+                            <td class="horario">15:00</td>
+                            <td>Fundamentos SI</td>
+                            <td>Mat Basica</td>
+                            <td>Fundamentos SI</td>
+                            <td>Mat Basica</td>
+                            <td>TecProg</td>
+                            <td>Livre</td>
+                            <td>Livre</td>
+                        </tr>
+
+                        <tr>
+                            <td class="horario">16:00</td>
+                            <td>Fundamentos SI</td>
+                            <td>Mat Basica</td>
+                            <td>Fundamentos SI</td>
+                            <td>Mat Basica</td>
+                            <td>TecProg</td>
+                            <td>Livre</td>
+                            <td>Livre</td>
+                        </tr>
+
+                        <tr>
+                            <td class="horario">17:00</td>
+                            <td colspan="7" class="rango">CAFE DA TARDE / REGAR HORTA</td>
+                        </tr>
+
+                        <tr>
+                            <td class="horario">18:00</td>
+                            <td colspan="7">EXERCICIOS</td>
+                        </tr>
+
+                        <tr>
+                            <td class="horario">19:00</td>
+                            <td colspan="7" class="rango">JANTAR</td>
+                        
+                        <tr>
+                            <td class="horario">20:00</td>
+                            <td colspan="7">LER LIVRO</td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="horario">21:00</td>
+                            <td colspan="7">NETFLIX</td>
+                        </tr>
+                    </table><!-- Planejamento -->
+                </div><!-- Tabela -->
+            </main><!-- Interface -->
+
+            <footer id="rodape">
+                <div class="caixa-rodape">
+                    <div class="mapa-site">
+                        <h2>Mapa do Site</h2>
+                        <ul class="lista-rodape" id="lista-mapa">
+                            <li>
+                                <a href="index.html">
+                                    <span>Início</span>
+                                    <i class="fas fa-home"></i>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="sobre.html">
+                                    <span>Sobre Mim</span>
+                                    <i class="fas fa-user-circle"></i>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="planejamento.html">
+                                    <span>Planejamento</span>
+                                    <i class="fas fa-table"></i>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="contato.html">
+                                    <span>Contato</span>
+                                    <i class="fas fa-phone-square-alt"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div><!-- Mapa do Site-->
+                </div><!-- Caixa do Rodapé -->
+
+                <div class="caixa-rodape">
+                    <div class="logo-rodape">
+                        <a href="index.html">
+                            <img src="_imagens/logo.png">
+                            <h2>Lucas Santana</h2>
+                            <p>Desenvolvendo Ideias.</p>
+                        </a>
+                    </div>
+                </div><!-- Caixa do Rodapé -->
+
+                <div class="caixa-rodape">
+                    <h2>Me encontre nas redes sociais</h2>
+                    <ul class="lista-rodape" id="lista-redes">
+                        <li>
+                            <a href="https://www.linkedin.com/in/lucas377">
+                                <i class="fab fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.facebook.com/lucasarts.377" target="_blank">
+                                <i class="fab fa-facebook-square"></i>
+                                <span>Facebook</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://github.com/lucas-377" target="_blank">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.instagram.com/b4tman2.0" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                                <span>Instagram</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div><!-- Caixa do Rodapé -->
+            </footer><!-- Rodapé -->
+            
+            <div class="direitos-autorais">
+                <p>&copy; 2020 Criado por Lucas Santana.</p>
+            </div><!-- Direitos Autorais -->
+        </div><!-- Container -->
+    </body>
+</html>

@@ -1,0 +1,348 @@
+/* Folha de estilos criada por Lucas Santana */
+
+/* Caracteres latinos */
+@charset "UTF-8";
+
+/* ==========================================================================
+Sobrescrita dos padrões do navegador.
+========================================================================== */
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ==========================================================================
+Cabeçalho.
+========================================================================== */
+header.cabecalho {
+    position: relative;
+    left: 0;
+    top: 0;
+    height: auto;
+    width: 100%;
+}
+
+
+/* Logo.
+========================================================================== */
+picture#logo-img a {
+    border: none!important;
+}
+
+#logo {
+    width: 50px;
+    height: 50px;
+    border: none!important;
+    margin-left: 100px;
+    margin-top: 15px;
+    vertical-align: top;
+    transition: all 0.3s;
+}
+
+/* Logotipo.
+========================================================================== */
+label.logotipo a {
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 80px;
+    padding: 0 10px;
+    font-weight: bold;
+    border: none!important;
+    transition: all 0.3s;
+}
+
+/* Menu.
+========================================================================== */
+nav#menu {
+    position: fixed;
+    background-color: transparent;
+    top: 0;
+    left: 0;
+    height: 80px;
+    width: 100%;
+    z-index: 1090;
+    transition: all 0.3s;
+}
+
+/* Lista.
+========================================================================== */
+nav#menu ul {
+    float: right;
+    margin-right: 100px;
+    transition: all 0.3s;
+}
+
+/* Links.
+========================================================================== */
+nav#menu ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0;
+}
+
+/* Referência dos Links.
+========================================================================== */
+nav#menu ul li a {
+    color: #ffffff;
+    font-size: 13px;
+    text-transform: uppercase;
+    border-radius: 18px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    padding: 8px;
+    transition: all 0.2s;
+}
+
+/* Link ativo e Mouse sobre.
+========================================================================== */
+nav#menu a.ativo, nav#menu a:hover {
+    border-radius: 18px;
+    border: 1px solid #ffffff;
+    color: #fff;
+    transition: .5s;
+}
+
+/* Menu Black.
+========================================================================== */
+nav#menu-black {
+    position: fixed;
+    background-color: black;
+    top: 0;
+    left: 0;
+    height: 80px;
+    width: 100%;
+    z-index: 1;
+    transition: all 0.3s;
+}
+
+/* Lista.
+========================================================================== */
+nav#menu-black ul {
+    float: right;
+    margin-right: 100px;
+    transition: all 0.3s;
+}
+
+/* Links.
+========================================================================== */
+nav#menu-black ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0;
+}
+
+/* Referência dos Links.
+========================================================================== */
+nav#menu-black ul li a {
+    color: #ffffff;
+    font-size: 13px;
+    text-transform: uppercase;
+    border-radius: 18px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    padding: 8px;
+    transition: all 0.2s;
+}
+
+/* Link ativo e Mouse sobre.
+========================================================================== */
+nav#menu-black a.ativo, nav#menu-black a:hover {
+    border-radius: 18px;
+    border: 1px solid #ffffff;
+    color: #fff;
+    transition: .5s;
+}
+
+/* Icone da Caixa de Seleção.
+========================================================================== */
+.botaocheck {
+    font-size: 30px;
+    color: #ffffff;
+    line-height: 80px;
+    float: right;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+    transition: all 0.3s;
+}
+
+/* Caixa de Seleção.
+========================================================================== */
+#check {
+    display: none;
+}
+
+/* 
+
+/* 
+
+==========================================================================
+Corpo do Site.
+========================================================================== */
+
+/* Titulos Centralizados.
+========================================================================== */
+.titulo-center {
+    text-align: center;
+    padding-bottom: 15px;
+    font-size: 60px;
+}
+
+/* Divisão Principal.
+========================================================================== */
+div.container {
+    max-width: 1980px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #414141;
+}
+
+#main-index {
+    background-color: #7159c1;
+}
+
+/* Banner.
+========================================================================== */
+.banner-slick {
+    max-width: 1900px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.img-banner {
+    width: 100%;
+}
+
+/* Conteudo do Banner.
+========================================================================== */
+div#conteudo-banner {
+    width: 50%;
+    margin: 0 25%;
+    top: 30%;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1.5px 0px black;
+    position: absolute;
+    z-index: 1010;
+}
+
+div#conteudo-banner p {
+    line-height: 23px;
+}
+
+#btn-contato {
+    background: transparent;
+    color: white;
+    border-radius: 5px;
+    border: solid white;
+    padding: 16px;
+    margin: 30px 5px;
+    font-size: 17px;
+}
+
+#btn-sobre {
+    background: tomato;
+    color: white;
+    border-radius: 5px;
+    border: solid tomato;
+    padding: 16px;
+    margin: 30px 5px;
+    font-size: 17px;
+}
+
+/* ==========================================================================
+Rodapé.
+========================================================================== */
+footer#rodape {
+    width: 100%;
+    background-color: #000000;
+    padding-top: 5em;
+    padding-bottom: 40px;
+    position: relative;
+    clear: both;
+}
+
+footer#rodape h2, #rodape p {
+    color: #ffffff;
+}
+
+/* Caixas.
+========================================================================== */
+.caixa-rodape {
+    width: 33.33%;
+    padding: 1%;
+    float: left;
+}
+
+#rodape:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+/* Logo.
+========================================================================== */
+.logo-rodape {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.logo-rodape img {
+    width: 80px;
+}
+
+.logo-rodape h2 {
+    margin-top: 10px;
+}
+
+/* Listas.
+========================================================================== */
+.lista-rodape li {
+    margin-top: 5px;
+}
+
+.lista-rodape a {
+    color: #ffffff;
+    transition: .5s;
+}
+
+.lista-rodape a:hover {
+    color: #808080;
+}
+
+.lista-rodape li:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+#lista-redes {
+    float: left;
+}
+
+/* Mapa Site.
+========================================================================== */
+.mapa-site {
+    text-align: right;
+}
+
+#lista-mapa {
+    float: right;
+}
+
+/* Direitos Autorais.
+========================================================================== */
+.direitos-autorais {
+    width: 100%;
+    background-color: #0d0d0d;
+    position: relative;
+    text-align: center;
+    color: #ffffff;
+}
+
+.direitos-autorais p {
+    height: 50px;
+    line-height: 50px;
+}

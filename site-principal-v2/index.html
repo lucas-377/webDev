@@ -1,0 +1,180 @@
+<!-- Criado por Lucas Santana -->
+
+<!-- Define o tipo do documento -->
+<!DOCTYPE html>
+
+<html lang="pt-br"> <!-- Define a lingua português do Brasil -->
+
+    <head>
+        <meta charset="UTF-8" /> <!-- Tipo de caracteres latino -->
+
+        <!-- Ajusta a visualização do conteudo, de acordo com o tamanho da janela -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Home</title>
+
+        <!-- CSS3 -->
+        <link rel="stylesheet" href="main.css" />
+
+        <!-- Slick -->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    </head>
+
+    <body>
+        <header class="cabecalho">
+            <nav id="menu">
+                <!-- Cria uma caixa de seleção -->
+                <input type="checkbox" id="check" />
+
+                <!-- Relaciona o icone "barras" a caixa selecionavel -->
+                <label for="check" class="botaocheck">
+                    <i class="fas fa-bars"></i>
+                </label>
+
+                <picture id="logo-img">
+                    <a href="index.html">
+                    <img id="logo" src="logols-white.png" alt="Logo LS"/>
+                    </a>
+                </picture><!-- Logo -->
+            
+                <!-- Insere o texto do logo -->
+                <label class="logotipo">
+                    <a href="index.html">Lucas Santana</a>
+                </label>
+
+                <ul>
+                    <li><a class="ativo" href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre Mim</a></li>
+                    <li><a href="curriculo.html">Currículo</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav><!-- Menu -->
+        </header><!-- Cabeçalho -->
+
+        <div class="container">
+            <div id="main-index">
+                <div id="conteudo-banner">
+                    <h1 class="titulo-center" onclick="clique()">Olá, mundo!</h1>
+                    <p>Esse site, foi criado com o intuito de desenvolver habilidades e aprender mais sobre o desenvolvimento front-end com HTML5 e CSS3.
+                    Apliquei técnicas de responsividade, para compatibilidade com diversos dispositivos e menu fixo para facilitar a navegação.
+                    </p>
+
+                    <input id="btn-sobre" type="button" value="Sobre mim">
+                    <input id="btn-contato" type="button" value="Contato">
+                </div><!-- Conteudo Banner -->
+
+                <div class="banner-slick">
+                    <img class="img-banner" src="banner2.jpg" alt="Banner Principal">
+
+                    <img class="img-banner" src="banner3.jpg" alt="Banner Principal">
+                </div>
+            </div><!-- Main Index-->
+        </div><!-- Container -->
+
+        <footer id="rodape">
+            <div class="caixa-rodape">
+                <div class="mapa-site">
+                    <h2>Mapa do Site</h2>
+                    <ul class="lista-rodape">
+                        <li>
+                            <a href="index.html">
+                                <span>Início</span>
+                                <i class="fas fa-home"></i>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="sobre.html">
+                                <span>Sobre Mim</span>
+                                <i class="fas fa-user-circle"></i>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="curriculo.html">
+                                <span>Currículo</span>
+                                <i class="fas fa-file"></i>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="contato.html">
+                                <span>Contato</span>
+                                <i class="fas fa-phone-square-alt"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div><!-- Mapa do Site-->
+            </div><!-- Caixa do Rodapé -->
+
+            <div class="caixa-rodape">
+                <div class="logo-rodape">
+                    <a href="index.html">
+                        <img src="logols-white.png">
+                        <h2>Lucas Santana</h2>
+                        <p>Desenvolvendo Ideias.</p>
+                    </a>
+                </div>
+            </div><!-- Caixa do Rodapé -->
+
+            <div class="caixa-rodape">
+                <h2>Me encontre nas redes sociais</h2>
+                <ul class="lista-rodape">
+                    <li>
+                        <a href="https://www.linkedin.com/in/lucas377">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.facebook.com/lucasarts.377" target="_blank">
+                            <i class="fab fa-facebook-square"></i>
+                            <span>Facebook</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://github.com/lucas-377" target="_blank">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.instagram.com/b4tman2.0" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                            <span>Instagram</span>
+                        </a>
+                    </li>
+                </ul>
+            </div><!-- Caixa do Rodapé -->
+        </footer><!-- Rodapé -->
+        
+        <div class="direitos-autorais">
+            <p>&copy; 2020 Criado por Lucas Santana.</p>
+        </div><!-- Direitos Autorais -->
+
+        <!-- Biblioteca de icones -->
+        <script src="https://kit.fontawesome.com/6965183d02.js" crossorigin="anonymous"></script>
+
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+        <!-- Script Js-->
+        <script src="script.js"></script>
+
+        <script>
+            var easteregg = window.document.querySelector('.titulo-center')
+
+            function clique(){
+                easteregg.innerHTML = 'Eu amo a Tânia <3'
+            }
+        </script>
+
+        <!-- Slick Js -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    </body>
+</html>

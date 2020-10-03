@@ -290,4 +290,36 @@ Segurança.
 .infos {
     display: flex;
     flex-direction: column;
+    margin-bottom: 100px;
 }
+
+/* ==========================================================================
+Fale Com.
+========================================================================== */
+#falecom {
+    height: 490px;
+    background-image: url('../imgs/bg-falecom.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.text-right {
+    text-align: right;
+    color: #ffffff;
+}
+
+#titulo-especialista {
+    font-size: 60px;
+    padding-top: 110px;
+}
+
+#especialista {
+    margin-top: -23px;
+}
+
+#descricao-especialista {
+    font-size: 20px;
+    font-weight: 400;
+    padding: 20px 0;
+}
+

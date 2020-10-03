@@ -1,0 +1,141 @@
+/* Folha de estilos criada por Lucas Santana */
+
+/* Caracteres latinos */
+@charset "UTF-8";
+
+/* ==========================================================================
+Sobrescrita dos padrões do navegador.
+========================================================================== */
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ==========================================================================
+Cabeçalho 1.
+========================================================================== */
+header.cabecalho1 {
+    height: auto;
+    width: 100%;
+    display: flex;
+    position: absolute;
+}
+
+#menu1 {
+    background-image: url('../imgs/header-left.png');
+    width: 751px;
+}
+
+#menu1 ul {
+    margin-left: 35%;
+}
+
+#menu2 {
+    background-image: url('../imgs/header-bg.png');
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.menu ul li {
+    display: inline-block;
+    line-height: 54px;
+    margin-right: 4px;
+    font-weight: 500;
+    color: white;
+}
+
+/* ==========================================================================
+Cabeçalho 2.
+========================================================================== */
+header.cabecalho2 {
+    top: 54px;
+    height: 110px;
+    padding-top: 40px;
+    border-bottom: 1px solid white;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    right: 50px;
+}
+
+header.cabecalho2 ul {
+    display: flex;
+}
+
+header.cabecalho2 ul li{
+    padding-top: 15px;
+    margin-left: 15px;
+}
+
+#menu ul li a {
+    color: #ffffff;
+    font-size: 13px;
+    text-transform: uppercase;
+    transition: all 0.2s;
+}
+
+#menu ul li a:hover {
+    padding-bottom: 36px;
+    border-bottom: 3px solid #ffffff;
+}
+
+#menu a.ativo {
+    padding-bottom:27px;
+    border-bottom: 3px solid #ffffff;
+}
+/* ==========================================================================
+Banner.
+========================================================================== */
+#banner {
+    width: 100%;
+    height: 1337px;
+    background: url(/imgs/banner.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+Conteiner.
+========================================================================== */
+.conteiner {
+    width: 982px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+Conteúdo do banner.
+========================================================================== */
+#setas {
+    padding-top: 350px;
+    cursor: pointer;
+}
+
+#seta-esq {
+    float: left;
+}
+
+#seta-dir {
+    float: right;
+}
+
+#texto {
+    padding-top: 65px;
+    color: #ffffff;
+    font-size: 42px;
+}
+
+/* ==========================================================================
+Whatsapp fixo.
+========================================================================== */
+#whats-fixo {
+    top: 400px;
+    position: fixed;
+    float: right;
+}

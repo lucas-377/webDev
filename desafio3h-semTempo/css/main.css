@@ -174,7 +174,7 @@ Proteção.
     background-position: center;
 }
 
-#texto-protecao {
+.texto-titulo {
     color: #ffffff;
     font-size: 50px;
     padding-top: 100px;
@@ -182,6 +182,7 @@ Proteção.
 
 #protecao-itens {
     margin-top: 54px;
+    width: 1170px;
     box-shadow: 5px 2px 15px #00000038;
     display: flex;
 }
@@ -235,4 +236,58 @@ Proteção.
 
 #calltoaction-white a {
     color: #ffffff;
+}
+
+/* ==========================================================================
+Segurança.
+========================================================================== */
+#seguranca {
+    margin-top: 200px;
+}
+
+.texto-titulo-azul {
+    color: #2a7292;
+    font-size: 50px;
+    padding-top: 100px;
+}
+
+#infos {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#info1 {
+    margin: 0;
+}
+
+#info3 {
+    margin: 0;
+}
+
+.icone {
+    height: 89px;
+}
+
+.numeros {
+    font-size: 72px;
+    font-weight: 700;
+    padding: 10px 0;
+    display: flex;
+}
+
+.mais {
+    color: #2a7292;
+    margin-left: -15px;
+}
+
+.descricao-info {
+    font-size: 24px;
+    color: #2a7292;
+    text-align: center;
+}
+
+.infos {
+    display: flex;
+    flex-direction: column;
 }

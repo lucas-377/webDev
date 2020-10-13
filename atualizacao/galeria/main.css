@@ -1,0 +1,171 @@
+/*------------------------------------------
+Reset dos padrões do navegador
+------------------------------------------*/
+@charset "UTF-8"; 
+
+*{
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*------------------------------------------
+Botão do menu responsivo
+------------------------------------------*/
+.menu-responsivo {
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+    height: 80px;
+    cursor: pointer;
+    font-size: 25px;
+    display: none;
+    line-height: 80px;
+    margin: 0;
+}
+
+#btn-menu {
+    display: none;
+}
+
+/*------------------------------------------
+Menu com submenu
+------------------------------------------*/
+.menu-dropdown {
+    background-color: black;
+    color: aliceblue;
+    width: 100%;
+    height: 80px;
+    position: relative;
+}
+
+.menu-dropdown ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu-dropdown ul li {
+    width: 200px;
+    margin: 0;
+}
+
+.menu-dropdown a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    background-color: black;
+    color: aliceblue;
+    height: 80px;
+    line-height: 80px;
+}
+
+.menu-dropdown ul ul {
+    display: none;
+    flex-direction: column;
+}
+
+.menu-dropdown ul ul li {
+    border-bottom: 2px solid salmon;
+}
+
+.menu-dropdown ul ul li a {
+    background-color: tomato;
+}
+
+.menu-dropdown ul li:hover ul {
+    display: contents;
+}
+
+.menu-dropdown a:hover {
+    background-color: brown;
+}
+
+/*------------------------------------------
+Sections Paralax
+------------------------------------------*/
+.banner {
+    height: 100vh;
+    width: 100%;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#banner {
+    background-image: url('./images/camera1.jpg');
+}
+
+#banner2 {
+    background-image: url('./images/camera2.jpg');
+}
+
+.container {
+    width: 1100px;
+}
+
+.faixa {
+    height: 100vh;
+    width: 100%;
+    background-color: whitesmoke;
+    padding-top: 100px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 0px 0px 20px 0px #00000040;
+    position: relative;
+}
+
+.botao button{
+    padding: 15px;
+    border: none;
+    background-color: violet;
+    margin-top: 20px;
+    color: whitesmoke;
+    outline: none;
+    border-radius: 5px;
+}
+
+.botao button:hover {
+    background-color: rgb(189, 88, 189);
+}
+
+/*------------------------------------------
+Responsividade
+------------------------------------------*/
+@media screen and (max-width: 600px) {
+    .menu-dropdown ul li {
+        width: 100%;
+    }
+
+    #btn-menu:checked ~.menu-dropdown {
+        margin-left: 0;
+    }
+
+    .menu-dropdown {
+        width: 100vw;
+        margin-left: -100%;
+        transition: all .4s;
+    }
+
+    .menu-responsivo {
+        display: block;
+        text-align: left;
+        padding-left: 50px;
+    }
+
+    .banner {
+        margin-top: -80px;
+    }
+}

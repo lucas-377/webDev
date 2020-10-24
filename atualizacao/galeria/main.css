@@ -36,6 +36,9 @@ Botão do menu responsivo
 /*------------------------------------------
 Menu com submenu
 ------------------------------------------*/
+header {
+    background-color: #000000;
+}
 .menu-dropdown {
     background-color: black;
     color: aliceblue;
@@ -89,6 +92,12 @@ Menu com submenu
 /*------------------------------------------
 Sections Paralax
 ------------------------------------------*/
+#cientista {
+    box-sizing: border-box;
+    transform: scale(0.5);
+    margin: 0;
+}
+
 .banner {
     height: 100vh;
     width: 100%;
@@ -115,10 +124,9 @@ Sections Paralax
 }
 
 .faixa {
-    height: 100vh;
     width: 100%;
     background-color: whitesmoke;
-    padding-top: 100px;
+    padding: 100px 0;
     text-align: center;
     display: flex;
     align-items: center;
@@ -132,13 +140,34 @@ Sections Paralax
     border: none;
     background-color: violet;
     margin-top: 20px;
-    color: whitesmoke;
     outline: none;
     border-radius: 5px;
 }
 
+.botao a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
 .botao button:hover {
     background-color: rgb(189, 88, 189);
+}
+
+form {
+    margin: 40px 0;
+}
+
+form label {
+    margin: 15px;
+    font-size: 20px;
+    display: block;
+}
+
+form input, textarea {
+    padding: 15px;
+    margin: 20px auto;
+    display: block;
+    width: 50%;
 }
 
 /*------------------------------------------

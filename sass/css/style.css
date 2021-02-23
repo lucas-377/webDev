@@ -26,6 +26,9 @@ body {
 Cores
 -----------------------*/
 /*-----------------------
+Mixins
+-----------------------*/
+/*-----------------------
 Componentes
 -----------------------*/
 .container {
@@ -36,6 +39,6 @@ Componentes
 
 .titulo,
 .subtitulo {
-  color: #fff;
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */

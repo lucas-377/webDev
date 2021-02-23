@@ -29,6 +29,19 @@ Cores
 $text-color-primary: #fff;
 
 /*-----------------------
+Mixins
+-----------------------*/
+@mixin trocaCor($cor) {
+    @if $cor == vermelho {
+        color: red;
+    } @else if $cor == branco {
+        color: white;
+    } @else {
+        color: black;
+    }
+}
+
+/*-----------------------
 Componentes
 -----------------------*/
 .container {
@@ -39,7 +52,7 @@ Componentes
 
 .titulo,
 .subtitulo {
-    color: $text-color-primary;
+    @include trocaCor(branco);
 }
 
 

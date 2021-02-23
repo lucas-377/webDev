@@ -1,0 +1,46 @@
+/*-----------------------
+Reset
+-----------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*-----------------------
+Estrutura
+-----------------------*/
+html {
+    
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: blue;
+}
+
+/*-----------------------
+Cores
+-----------------------*/
+$text-color-primary: #fff;
+
+/*-----------------------
+Componentes
+-----------------------*/
+.container {
+    margin: 0 auto;
+    max-width: 1100px;
+    padding: 0 15px;
+}
+
+.titulo,
+.subtitulo {
+    color: $text-color-primary;
+}
+
+
+

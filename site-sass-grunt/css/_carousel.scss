@@ -2,12 +2,9 @@
 Tema Slick Customizado
 -------------------------*/
 .banner--dinamico .banner__item {
-    // color: white;
-    // background-color: #3498db;
     min-height: 250px;
     position: relative;
     text-align: center;
-    // text-transform: uppercase;
     // margin: 0 15px;
     display: flex;
     justify-content: center;
@@ -15,7 +12,7 @@ Tema Slick Customizado
     outline: none;
 
     &:hover {
-        // opacity: .7;
+        // filter: brightness(70%);
     }
 }
 

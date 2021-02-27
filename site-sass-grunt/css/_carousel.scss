@@ -1,0 +1,51 @@
+/*-------------------------
+Tema Slick Customizado
+-------------------------*/
+.banner--dinamico .banner__item {
+    // color: white;
+    // background-color: #3498db;
+    min-height: 250px;
+    position: relative;
+    text-align: center;
+    // text-transform: uppercase;
+    // margin: 0 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+
+    &:hover {
+        // opacity: .7;
+    }
+}
+
+.slick-prev::before,
+.slick-next::before {
+    color: black;
+    content: '';
+}
+
+.slick-arrow {
+    width: 30px;
+    height: 30px;
+    z-index: 5;
+    border-top: 3px solid #000;
+    border-right: 3px solid #000;
+    -webkit-transition: opacity 0.3s ease-out;
+    -moz-transition: opacity 0.3s ease-out;
+    transition: opacity 0.3s ease-out;
+}
+
+.slick-arrow:hover {
+    opacity: .5
+}
+
+.slick-prev {
+    left: 3rem;
+    transform: rotate(225deg);
+}
+
+.slick-next {
+    right: 3rem;
+    transform: rotate(45deg);
+}

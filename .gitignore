@@ -1,3 +1,2 @@
-/package-lock.json
-/node_modules/*
-/node_modules/**/*
+site-sass-grunt/package-lock.json
+site-sass-grunt//node_modules/*

@@ -49,8 +49,8 @@ Tema Slick Principal
 
 .slick-prev:before,
 .slick-next:before {
-    font-family: 'slick';
-    font-size: 20px;
+    font-family: 'Arial';
+    font-size: 8rem;
 
     opacity: .75;
     color: white;
@@ -69,11 +69,11 @@ Tema Slick Principal
 }
 
 .slick-prev:before {
-    content: '←';
+    content: '‹';
 }
 
 [dir='rtl'] .slick-prev:before {
-    content: '→';
+    content: '›';
 }
 
 .slick-next {
@@ -86,11 +86,11 @@ Tema Slick Principal
 }
 
 .slick-next:before {
-    content: '→';
+    content: '›';
 }
 
 [dir='rtl'] .slick-next:before {
-    content: '←';
+    content: '‹';
 }
 
 /* Dots */

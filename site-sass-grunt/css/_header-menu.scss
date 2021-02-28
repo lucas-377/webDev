@@ -1,0 +1,32 @@
+/*-------------------------
+Menu Cabecalho
+-------------------------*/
+.header__menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu__lista {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.menu__item a {
+    text-decoration: none;
+    margin-left: 15px;
+    color: black;
+}
+
+.menu__mobile--barras {
+    display: block;
+    width: 30px;
+    height: 5px;
+    background: black;
+    border-radius: 5px;
+
+    &:not(:last-child) {
+        margin-bottom: 5px;
+    }
+}

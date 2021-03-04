@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Finanças</title>
+
+    <!-- FONTES -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <header>
+        <h1 id="header__logo">Dev Finances</h1>
+    </header>
+
+    <main class="container">
+        <section id="balance">
+            <h2 class="titulo">Balanço</h2>
+
+            <div class="card balance__card">
+                <h3 class="subtitulo">Entradas</h3>
+                <p class="value">R$ 2.000,00</p>
+            </div>
+
+            <div class="card balance__card">
+                <h3 class="subtitulo">Saídas</h3>
+                <p class="value">R$ 1.000,00</p>
+            </div>
+
+            <div class="card balance__card--total">
+                <h3 class="subtitulo">Total</h3>
+                <p class="value">R$ 1.000,00</p>
+            </div>
+        </section>
+
+        <section id="transactions">
+            <h2 class="titulo">Transações</h2>
+
+            <table id="data-table">
+                <thead>
+                    <tr>
+                        <th>Descrição</th>
+                        <th>Valor</th>
+                        <th>Data</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="description">Luz</td>
+                        <td class="expense">- R$ 500,00</td>
+                        <td class="date">01/01/2021</td>
+                    </tr>
+                    <tr>
+                        <td class="description">Luz</td>
+                        <td class="expense">- R$ 500,00</td>
+                        <td class="date">01/01/2021</td>
+                    </tr>
+                    <tr>
+                        <td class="description">Luz</td>
+                        <td class="income">+ R$ 500,00</td>
+                        <td class="date">01/01/2021</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy;Copyright 2021 by Lucas Santana</p>
+        </div>
+
+        <!-- SCRIPTS -->
+        <script src="./js/app.js"></script>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+// Cores
+$cor-verde: #2D4A22;
+$cor-verde-claro100: #12a454;
+$cor-verde-claro200: #3f9620;
+
+$cor-cinza-bg: #e0e0e0;
+
+$cor-azul: #208096;
+$cor-azul-escuro: #166273;
+
+$cor-vermelho: #e92929;
+
+// Fontes
+$fonte-titulo: 'Poppins', sans-serif;
+$fonte-paragrafo: 'Open Sans', sans-serif;
+
+/*------------------------
+Animacoes
+------------------------*/
+@keyframes fadeDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-80px);
+    }   
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}

@@ -1,0 +1,89 @@
+/*------------------------
+Body
+------------------------*/
+#balance {
+    margin-top: -7rem;
+    animation: fadeDown 1.5s ease;
+
+    .titulo {
+        color: #fff;
+        font-weight: normal;
+    }
+
+    p {
+        font-size: 2.3rem;
+        font-weight: bold;
+    }
+
+    .balance__card {
+        &--total {  
+            background-color: $cor-verde-claro200;
+            color: #fff;
+          
+            .subtitulo,
+            .value {
+                color: #fff;
+            }
+        }
+    }
+}
+
+#transactions {
+    animation: fadeDown 1.8s ease;
+
+    .titulo {
+        color: $cor-azul-escuro;
+        font-weight: normal;
+    }
+}
+
+#data-table {
+    width: 100%;
+    border-spacing: 0 .5rem;
+}
+
+table {
+    color: $cor-azul;
+
+    thead tr th {
+        &:first-child,
+        &:last-child {
+            border-radius: .5rem;
+        }
+
+        background-color: #fff;
+
+        font-weight: normal;
+        padding: 1rem 2rem;
+        text-align: left;
+    }
+
+    tbody tr {
+        &:hover {
+            opacity: 1;
+        }
+
+        td {
+            &:first-child,
+            &:last-child {
+                border-radius: .5rem;
+            }
+
+            background-color: #fff;
+            text-align: left;
+            padding:  1rem 2rem;
+
+            &.income {
+                color: $cor-verde-claro100;
+            }
+
+            &.expense {
+                color: $cor-vermelho;
+            }
+        }
+    }
+
+    tr {
+        opacity: .7;
+    }
+}

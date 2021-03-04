@@ -1,0 +1,53 @@
+/*------------------------
+Estrutura
+------------------------*/
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: $fonte-paragrafo;
+    background-color: $cor-cinza-bg;
+}
+
+h1, h2, h3, h4,
+.titulo {
+    font-family: $fonte-titulo;
+    margin-bottom: .8rem;
+}
+
+.container {
+    width: min(1100px, 800px);
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: #fff;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    padding: 2rem;
+    box-shadow: 0px 7px 20px #0003;
+    transition: .3s;
+
+    .titulo {
+        color: $cor-azul-escuro;
+    }
+
+    .subtitulo {
+        font-size: 1.4rem;
+        font-weight: normal;
+        margin-bottom: 1rem;
+        color: $cor-azul-escuro;
+    }
+
+    .value {
+        color: $cor-azul-escuro;
+    }
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+}

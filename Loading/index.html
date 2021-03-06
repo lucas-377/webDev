@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre Loader</title>
+
+    <style>
+        .loader.active {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .loader.active .loader__content {
+            display: block;
+        }
+
+        .loader__content {
+            border: 7px solid #ffffff; /* Light grey */
+            border-top: 7px solid #d35151; /* Blue */
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1.3s ease-in-out infinite;
+            display: none;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .gallery {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .gallery__title {
+            font-family: Arial, Helvetica, sans-serif;
+            margin-bottom: 30px;
+            font-size: 30px;
+        }
+
+        .gallery__item {
+            width: calc(100% / 3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        img {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="loader active">
+        <div class="loader__content"></div>
+    </div>
+
+    <section class="gallery">
+        <h2 class="gallery__title">Random Images</h2>
+        <div class="galery__item">
+            <a href="">
+                <img src="https://picsum.photos/300/300" alt="Image">
+            </a>
+        </div>
+    </section>
+
+    <script>
+        const Loader = {
+            show(){
+                // Inicia o Loader
+                document.querySelector('.loader').classList.add('active');
+            },
+            hide(){
+                // Inicia o Loader
+                document.querySelector('.loader').classList.remove('active');
+            }
+        }
+
+        window.addEventListener("load", setTimeout(() => {
+            Loader.hide();
+        }, 2000));
+    </script>
+</body>
+</html>

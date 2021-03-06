@@ -1,3 +1,5 @@
+@use '../abstract' as *;
+
 /*------------------------
 Estrutura
 ------------------------*/
@@ -19,9 +21,20 @@ h1, h2, h3, h4,
 }
 
 .container {
-    width: min(1100px, 800px);
+    width: min(90vw, 800px);
     padding: 0 15px;
     margin: 0 auto;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    clip: rect(0 ,0 , 0, 0);
+    white-space: nowrap;
+    border-width: 0;
 }
 
 .card {
@@ -49,5 +62,57 @@ h1, h2, h3, h4,
 
     &:hover {
         transform: translateY(-5px);
+    }
+}
+
+.btn {
+    text-decoration: none;
+
+    &--transaction {
+        color: $cor-azul-escuro;
+        display: inline-block;
+        margin-bottom: 15px;
+        transition: .3s;
+
+        &:hover {
+            color: $cor-azul;
+        }
+    }
+}
+
+.button {
+    &.cancel {
+        color: $cor-vermelho;
+        border: 2px solid $cor-vermelho;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: .3s;
+
+        &:hover {
+            background-color: $cor-vermelho;
+            color: #fff;
+        }
+    }
+}
+
+button {
+    font-size: 1.6rem;
+    width: 100%;
+    height: 50px;
+    color: #fff;
+    background-color: $cor-verde-claro200;
+    border: none;
+    padding: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s;
+
+    &:hover {
+        background-color: $cor-verde-claro100;
     }
 }

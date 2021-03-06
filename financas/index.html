@@ -10,7 +10,12 @@
 
     <!-- FONTES -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@300;400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
     <!-- CSS -->
     <link rel="stylesheet" href="./css/main.css">
@@ -18,31 +23,33 @@
 
 <body>
     <header>
-        <h1 id="header__logo">Dev Finances</h1>
+        <h1 id="header__logo">L$ Finances</h1>
     </header>
 
     <main class="container">
         <section id="balance">
-            <h2 class="titulo">Balanço</h2>
+            <h2 class="sr-only">Balanço</h2>
 
             <div class="card balance__card">
-                <h3 class="subtitulo">Entradas</h3>
+                <h3 class="subtitulo subtitulo--in">Entradas</h3>
                 <p class="value">R$ 2.000,00</p>
             </div>
 
             <div class="card balance__card">
-                <h3 class="subtitulo">Saídas</h3>
+                <h3 class="subtitulo subtitulo--out">Saídas</h3>
                 <p class="value">R$ 1.000,00</p>
             </div>
 
             <div class="card balance__card--total">
-                <h3 class="subtitulo">Total</h3>
+                <h3 class="subtitulo subtitulo--total">Total</h3>
                 <p class="value">R$ 1.000,00</p>
             </div>
         </section>
 
         <section id="transactions">
-            <h2 class="titulo">Transações</h2>
+            <h2 class="sr-only">Transações</h2>
+
+            <a href="#" onclick="Modal.open();" class="btn btn--transaction">+ Nova Transação</a>
 
             <table id="data-table">
                 <thead>
@@ -50,6 +57,7 @@
                         <th>Descrição</th>
                         <th>Valor</th>
                         <th>Data</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -57,29 +65,75 @@
                         <td class="description">Luz</td>
                         <td class="expense">- R$ 500,00</td>
                         <td class="date">01/01/2021</td>
+                        <td><i class="fas fa-minus-circle"></i></td>
                     </tr>
                     <tr>
                         <td class="description">Luz</td>
                         <td class="expense">- R$ 500,00</td>
                         <td class="date">01/01/2021</td>
+                        <td><i class="fas fa-minus-circle"></i></td>
                     </tr>
                     <tr>
                         <td class="description">Luz</td>
                         <td class="income">+ R$ 500,00</td>
                         <td class="date">01/01/2021</td>
+                        <td><i class="fas fa-minus-circle"></i></td>
                     </tr>
                 </tbody>
             </table>
         </section>
     </main>
 
+    <div class="modal-overlay">
+        <div class="modal">
+            <span class="modal__close" onclick="Modal.close();">&times;</span>
+            <div id="form">
+                <h2>Nova Transação</h2>
+                <form action="">
+                    <div class="input-group">
+                        <label class="sr-only" for="description">Valor</label>
+                        <input type="text" id="description" name="description" placeholder="Descrição">
+
+                        <label class="sr-only" for="amount">Valor</label>
+                        <input type="number" step="0.01" id="amount" name="amount" placeholder="0,00">
+
+                        <small class="help">Use o sinal - (negativo) para despesas e , (vírgula) para casas
+                            decimais.</small>
+
+                        <label class="sr-only" for="Data">Valor</label>
+                        <input type="date" id="date" name="date" placeholder="Data">
+
+                        <div class="input-group actions">
+                            <a href="#" onclick="Modal.close();" class="button cancel">Cancelar</a>
+                            <button>Salvar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <footer>
         <div class="container">
-            <p>&copy;Copyright 2021 by Lucas Santana</p>
+            <p data-aos="fade-right">&copy;Copyright 2021 by Lucas Santana</p>
         </div>
 
         <!-- SCRIPTS -->
         <script src="./js/app.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+        <script>
+            const Modal = {
+                open(){
+                    // Abrir modal
+                    document.querySelector('.modal-overlay').classList.add('active');
+                },
+                close() {
+                    // Fechar modal
+                    document.querySelector('.modal-overlay').classList.remove('active');
+                }
+            }
+        </script>
     </footer>
 </body>
 

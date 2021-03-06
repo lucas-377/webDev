@@ -1,12 +1,8 @@
 // Reset
-@import 'structure/reset';
+@use 'structure/reset' as *;
 
-// Cores, Fontes e Animacoes
-@import 'abstract/abstract';
+// Fontes e Cores
+@use 'abstract' as *;
 
 // Estrutura
-@import 'structure/structure';
-
-@import 'structure/header';
-@import 'structure/body';
-@import 'structure/footer';
+@use 'structure' as *;

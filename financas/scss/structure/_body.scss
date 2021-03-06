@@ -1,3 +1,5 @@
+@use '../abstract' as *;
+
 /*------------------------
 Body
 ------------------------*/
@@ -16,19 +18,53 @@ Body
     }
 
     .balance__card {
+        .subtitulo {
+            &--in {
+                &::after {
+                    content: "\f0aa";
+                    font-family: "Font Awesome 5 Pro"; 
+                    font-weight: 900;
+                    margin-left: 15px;
+                }
+            }
+
+            &--out {
+                &::after {
+                    content: "\f0ab";
+                    font-family: "Font Awesome 5 Pro"; 
+                    font-weight: 900;
+                    margin-left: 15px;
+                }
+            }
+        }
+
         &--total {  
             background-color: $cor-verde-claro200;
             color: #fff;
-          
+            
             .subtitulo,
             .value {
                 color: #fff;
+            }
+
+            .subtitulo {
+                &--total {
+                    &::after {
+                        content: "\f555";
+                        font-family: "Font Awesome 5 Pro"; 
+                        font-weight: 900;
+                        margin-left: 15px;
+                    }
+                }
             }
         }
     }
 }
 
 #transactions {
+    display: block;
+    overflow-x: auto;
+    width: 100%;
     animation: fadeDown 1.8s ease;
 
     .titulo {
@@ -80,10 +116,110 @@ table {
             &.expense {
                 color: $cor-vermelho;
             }
+
+            i {
+                cursor: pointer;
+            }
         }
     }
 
     tr {
         opacity: .7;
+    }
+}
+
+.modal-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    z-index: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: .3s;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        backdrop-filter: blur(4px);
+
+        .modal {
+            animation: fadeDown .4s ease;
+        }
+    }
+}
+
+.modal {
+    background-color: #f0f2f5;
+    padding: 2.4rem;
+    position: relative;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 5px;
+
+    &__close {
+        font-size: 2.5rem;
+        border: 2px solid white;
+        border-radius: 50%;
+        height: 30px;
+        color: #fff;
+        width: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        background: #000;
+        top: -16px;
+        right: -15px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #5a5a5a;
+        }
+    }
+}
+
+#form {
+    max-width: 500px;
+
+    h2 {
+        margin-top: 0;
+    }
+
+    input {
+        border: none;
+        border-radius: 5px;
+        padding: 0.8rem;
+        width: 100%;
+        margin-bottom: .8rem;
+    }
+
+    .input-group {
+        margin-top: 0.8rem;
+
+        .help {
+            opacity: .4;
+            margin-bottom: .8rem;
+            display: block;
+            text-align: center;
+        }
+
+        &.actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .button,
+            button {
+                width: 48%;
+            }
+        }
     }
 }

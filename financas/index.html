@@ -61,24 +61,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td class="description">Luz</td>
-                        <td class="expense">- R$ 500,00</td>
-                        <td class="date">01/01/2021</td>
-                        <td><i class="fas fa-minus-circle"></i></td>
-                    </tr>
-                    <tr>
-                        <td class="description">Luz</td>
-                        <td class="expense">- R$ 500,00</td>
-                        <td class="date">01/01/2021</td>
-                        <td><i class="fas fa-minus-circle"></i></td>
-                    </tr>
-                    <tr>
-                        <td class="description">Luz</td>
-                        <td class="income">+ R$ 500,00</td>
-                        <td class="date">01/01/2021</td>
-                        <td><i class="fas fa-minus-circle"></i></td>
-                    </tr>
+                    <!-- Transacoes add dinamicamente via JS -->
                 </tbody>
             </table>
         </section>
@@ -120,20 +103,6 @@
 
         <!-- SCRIPTS -->
         <script src="./js/app.js"></script>
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-        <script>
-            const Modal = {
-                open(){
-                    // Abrir modal
-                    document.querySelector('.modal-overlay').classList.add('active');
-                },
-                close() {
-                    // Fechar modal
-                    document.querySelector('.modal-overlay').classList.remove('active');
-                }
-            }
-        </script>
     </footer>
 </body>
 

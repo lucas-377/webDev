@@ -10,35 +10,36 @@ const Modal = {
     }
 }
 
-// Array de transacoes
-const transactions = [{
-        id: 1,
-        description: 'Luz',
-        amount: 12000,
-        date: '10/03/2021'
-    },
-    {
-        id: 2,
-        description: 'Água',
-        amount: 4000,
-        date: '22/03/2021'
-    },
-    {
-        id: 3,
-        description: 'Internet',
-        amount: 10000,
-        date: '10/03/2021'
-    }
-]
-
 // Transacao
 const Transaction = {
-    // Capta as transacoes do objeto
-    all: transactions,
+    // Array de transacoes
+    all: [
+        {
+            description: 'Luz',
+            amount: 12000,
+            date: '10/03/2021'
+        },
+        {
+            description: 'Água',
+            amount: 4000,
+            date: '22/03/2021'
+        },
+        {
+            description: 'Internet',
+            amount: -10000,
+            date: '10/03/2021'
+        }
+    ],
 
     // Adiciona transacao
     add(transaction) {
         Transaction.all.push(transaction);
+
+        App.reload();
+    },
+
+    remove (index) {
+        Transaction.all.splice(index, 1);
 
         App.reload();
     },
@@ -129,6 +130,40 @@ const Utils = {
     }
 }
 
+// Formulario
+const Form = {
+    description: document.querySelector('#description'),
+    amount: document.querySelector('#amount'),
+    date: document.querySelector('#date'),
+
+    getValues() {
+        return {
+            description: Form.description.value,
+            amount: Form.amount.value,
+            date: Form.date.value
+        }
+    },
+
+    validateFields() {
+        const { description, amount, date} = Form.getValues();
+
+        if (description.trim() === '' || amount.trim() === '' || date.trim() === '') {
+            throw new Error('Por favor, preencha todos os campos!')
+        }
+    },
+
+    submit(event) {
+        event.preventDefault();
+
+        // Validacao do formulario
+        try {
+            Form.validateFields();
+        } catch (error) {
+            alert(error.message);
+        }
+    }
+}
+
 // App
 const App = {
     init() {
@@ -141,6 +176,7 @@ const App = {
 
     },
     reload() {
+        DOM.clearTransactions();
         App.init();
     }
 }

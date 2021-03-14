@@ -10,26 +10,20 @@ const Modal = {
     }
 }
 
+// Armazenamento
+const Storage = {
+    get() {
+        return JSON.parse(localStorage.getItem('ls.finances:transactions')) || [];
+    },
+    set(transactions) {
+        localStorage.setItem('ls.finances:transactions', JSON.stringify(transactions));
+    }
+}
+
 // Transacao
 const Transaction = {
     // Array de transacoes
-    all: [
-        {
-            description: 'Luz',
-            amount: 12000,
-            date: '10/03/2021'
-        },
-        {
-            description: 'Água',
-            amount: 4000,
-            date: '22/03/2021'
-        },
-        {
-            description: 'Internet',
-            amount: -10000,
-            date: '10/03/2021'
-        }
-    ],
+    all: Storage.get(),
 
     // Adiciona transacao
     add(transaction) {
@@ -79,11 +73,12 @@ const DOM = {
     addTransaction(transaction, index) {
         const tr = document.createElement('tr');
         tr.innerHTML = DOM.innerHTMLTransaction(transaction);
+        tr.dataset.index = index;
 
         DOM.transactionsContainer.appendChild(tr);
     },
 
-    innerHTMLTransaction(transaction) {
+    innerHTMLTransaction(transaction, index) {
         // Verifica o valor da transacao e aplica a devida classe css
         const CSSclass = transaction.amount > 0 ? "income" : "expense";
 
@@ -95,7 +90,7 @@ const DOM = {
             <td class="description">${transaction.description}</td>
             <td class="${CSSclass}">${amount}</td>
             <td class="date">${transaction.date}</td>
-            <td><i class="fas fa-minus-circle"></i></td>
+            <td><i class="fas fa-minus-circle" onclick="Transaction.remove(${index})"></i></td>
         </tr>
         `
 
@@ -127,6 +122,18 @@ const Utils = {
         });
 
         return signal + value;
+    },
+
+    formatAmount(value) {
+        value = Number(value.replace(/\,\./g, "")) * 100;
+
+        return value;
+    },
+
+    formatDate(date) {
+        const splittedDate = date.split("-");
+
+        return `${splittedDate[2]}/${splittedDate[1]}/${splittedDate[0]}`;
     }
 }
 
@@ -152,12 +159,43 @@ const Form = {
         }
     },
 
+    formatValues() {
+        let { description, amount, date} = Form.getValues();
+
+        amount = Utils.formatAmount(amount);
+        date = Utils.formatDate(date);
+
+        return {
+            description,
+            amount,
+            date
+        }
+    },
+
+    saveTransaction (transaction) {
+        Transaction.add(transaction);
+    },
+
+    clearFields() {
+        Form.description.value = '';
+        Form.amount.value = '';
+        Form.date.value = '';
+    },
+
     submit(event) {
         event.preventDefault();
 
-        // Validacao do formulario
         try {
+            // Validacao do formulario
             Form.validateFields();
+            // Formata os valores do formulario
+            const transaction = Form.formatValues();
+            // Salva os dados do formulario
+            Form.saveTransaction(transaction);
+            // Apaga os dados do formulario
+            Form.clearFields();
+            // Fecha o modal
+            Modal.close();
         } catch (error) {
             alert(error.message);
         }
@@ -168,12 +206,10 @@ const Form = {
 const App = {
     init() {
         // Adicao de transacoes na tabela
-        Transaction.all.forEach(transaction => {
-            DOM.addTransaction(transaction);
-        });
+        Transaction.all.forEach(DOM.addTransaction);
 
         DOM.updateBalance();
-
+        Storage.set(Transaction.all);
     },
     reload() {
         DOM.clearTransactions();
@@ -183,3 +219,21 @@ const App = {
 
 // Inicia a aplicacao
 App.init();
+
+//[
+//     {
+//         description: 'Luz',
+//         amount: 12000,
+//         date: '10/03/2021'
+//     },
+//     {
+//         description: 'Água',
+//         amount: 4000,
+//         date: '22/03/2021'
+//     },
+//     {
+//         description: 'Internet',
+//         amount: -10000,
+//         date: '10/03/2021'
+//     }
+// ]

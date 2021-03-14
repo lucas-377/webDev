@@ -32,17 +32,17 @@
 
             <div class="card balance__card">
                 <h3 class="subtitulo subtitulo--in">Entradas</h3>
-                <p class="value" id="income-display">R$ 2.000,00</p>
+                <p class="value" id="income-display">R$ 0,00</p>
             </div>
 
             <div class="card balance__card">
                 <h3 class="subtitulo subtitulo--out">Saídas</h3>
-                <p class="value" id="expense-display">R$ 1.000,00</p>
+                <p class="value" id="expense-display">R$ 0,00</p>
             </div>
 
             <div class="card balance__card--total">
                 <h3 class="subtitulo subtitulo--total">Total</h3>
-                <p class="value" id="total-display">R$ 1.000,00</p>
+                <p class="value" id="total-display">R$ 0,00</p>
             </div>
         </section>
 
@@ -72,7 +72,7 @@
             <span class="modal__close" onclick="Modal.close();">&times;</span>
             <div id="form">
                 <h2>Nova Transação</h2>
-                <form action="">
+                <form action="" onsubmit="Form.submit(event)">
                     <div class="input-group">
                         <label class="sr-only" for="description">Valor</label>
                         <input type="text" id="description" name="description" placeholder="Descrição">

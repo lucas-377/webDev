@@ -3,10 +3,13 @@ const express = require("express");
 const server = express();
 const routes = require("./routes");
 
+// Template Engine
+server.set('view engine', 'ejs');
+
 // Habilita os assets
 server.use(express.static("public"));
 
-// Rotas
+// Arquivo de Rotas
 server.use(routes);
 
 // Inicia o servidor na porta especificada.

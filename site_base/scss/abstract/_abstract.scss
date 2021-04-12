@@ -1,0 +1,30 @@
+// Cores
+
+// Fontes
+$fonte-titulo: 'Poppins', sans-serif;
+$fonte-paragrafo: 'Open Sans', sans-serif;
+
+/*------------------------
+Animacoes
+------------------------*/
+@keyframes slideRight {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-80px);
+    }   
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}

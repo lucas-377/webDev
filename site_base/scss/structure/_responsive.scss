@@ -1,0 +1,75 @@
+/*------------------------
+Responsivo
+------------------------*/
+@media screen and (max-width:615px){
+    header.active {
+        background: yellow;
+        position: fixed;
+        left: 0;
+        height: 100%;
+        bottom: 0;
+        top: 0;
+        right: 0;
+        width: 85%!important;
+        transform: translateX(0);
+        align-items: flex-start!important;
+        padding-top: 30px;
+        animation: slideRight .5s;
+    }
+
+    .menu {
+        &__links {
+            display: none;
+        }
+
+        &__mobile__btn,
+        &__mobile__btn::before,
+        &__mobile__btn:after {
+            content: "";
+            display: block;
+            width: 40px;
+            height: 5px;
+            background: #000;
+            border-radius: 5px;
+            transition: .3s;
+        }
+
+        &__mobile__btn::before {
+            margin-top: 8px;
+        }
+
+        &__mobile__btn::after {
+            margin-top: 3px;
+        }
+    }
+
+    .menu.active {
+        flex-direction: column;
+
+        .menu__links {
+            display: flex;
+            flex-direction: column;
+
+            &__link {
+                margin: 0;
+            }
+        }
+
+        .menu__mobile__btn {
+            display: block;
+            position: absolute;
+            top: 14px;
+            right: 25px;
+            margin-top: -11px;
+            transform: rotate(45deg);
+
+            &::before {
+                opacity: 0;
+            }
+
+            &::after {
+                transform: rotate(-90deg) translate(16px, 0px);
+            }
+        }
+    }
+}

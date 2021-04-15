@@ -1,0 +1,26 @@
+@use '../abstract' as *;
+
+/*------------------------
+Body
+------------------------*/
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    animation: fadeDown 1s;
+    background-image: url('../../images/eberhard-grossgasteiger-y2azHvupCVo-unsplash.webp');
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 50px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+}
+
+main label {
+    margin-bottom: 30px;
+}

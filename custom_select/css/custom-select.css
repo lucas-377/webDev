@@ -1,0 +1,103 @@
+/*------------------------
+Custom Select - Stylesheet
+by Lucas Santana
+------------------------*/
+/* Variables */
+:root {
+  --cs-width: 400px;
+  --cs-height: 200px;
+  --cs-border: 1px solid rgb(255, 0, 0);
+  --cs-border-radius: 5px;
+  --cs-padding: .25rem .5rem;
+  --cs-padding-left: .5rem;
+  --cs-background: #fff;
+  --cs-bg-highlight: #fff;
+  --cs-clr-hover: #fff;
+  --cs-hover: rgb(255, 97, 97);
+  --cs-clr-selected: #fff;
+  --cs-clr-selected-bg: rgb(100, 91, 91);
+  --cs-bar-width: 10px;
+  --cs-bar-radius: 3px;
+  --cs-clr-bar: rgb(255, 97, 97);
+  --cs-clr-bar-bg: rgb(255, 168, 168);
+}
+
+.cs, .cs__value, .cs__options, .cs__options__option {
+  box-sizing: border-box;
+}
+.cs {
+  display: inline-block;
+  position: relative;
+}
+.cs:focus > .cs__value {
+  border-width: 1.5px;
+  outline: none;
+}
+.cs__options {
+  display: none;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  border: var(--cs-border);
+  width: 100%;
+  border-top: none;
+  background: var(--cs-background);
+  max-height: var(--cs-height);
+  overflow-y: auto;
+  border-bottom-left-radius: var(--cs-border-radius);
+  border-bottom-right-radius: var(--cs-border-radius);
+}
+.cs__options::-webkit-scrollbar {
+  -webkit-appearance: none;
+          appearance: none;
+  width: var(--cs-bar-width);
+}
+.cs__options::-webkit-scrollbar-thumb {
+  border-radius: var(--cs-bar-radius);
+  background-color: var(--cs-clr-bar);
+}
+.cs__options::-webkit-scrollbar-track {
+  background-color: var(--cs-clr-bar-bg);
+}
+.cs__options.show {
+  display: block;
+}
+.cs__options__option {
+  list-style: none;
+  cursor: pointer;
+  padding: var(--cs-padding);
+}
+.cs__options__option:hover {
+  background-color: var(--cs-hover) !important;
+  color: var(--cs-clr-hover);
+}
+.cs__options__option:nth-child(odd) {
+  background-color: var(--cs-bg-highlight);
+}
+.cs__options__option.selected {
+  background-color: var(--cs-clr-selected-bg);
+  color: var(--cs-clr-selected);
+}
+.cs__value {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: var(--cs-width);
+  border: var(--cs-border);
+  padding: var(--cs-padding);
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-color: var(--cs-background);
+  border-radius: var(--cs-border-radius);
+}
+.cs__value::after {
+  content: "";
+  display: inline-block;
+  border: 6px solid transparent;
+  border-top-color: black;
+  margin-top: 8px;
+  margin-left: 12px;
+}/*# sourceMappingURL=custom-select.css.map */

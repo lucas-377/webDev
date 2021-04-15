@@ -1,0 +1,40 @@
+@use '../abstract' as *;
+
+/*------------------------
+Header
+------------------------*/
+header {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    height: 80px;
+}
+
+.menu {
+    &__logo {
+        text-decoration: none;
+        color: #000;
+        transition: .3s;
+        font-size: 3.5rem;
+
+        &:hover {
+            transform: scale(1.07);
+        }
+    }
+
+    &__links { 
+        list-style: none;
+
+        &__link {
+            text-decoration: none;
+            color: #000;
+            margin-left: 15px;
+            transition: .3s;
+
+            &:hover {
+                color: rgba(0, 0, 0, 0.6);
+            }
+        }
+    }
+}

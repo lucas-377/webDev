@@ -1,6 +1,6 @@
 /*------------------------
 Custom Select - Plugin
-by Lucas Santana
+by Lucas Santana (b4tman)
 ------------------------*/
 // Custom Select Class.
 class Select {
@@ -19,6 +19,9 @@ class Select {
 
         // Hide the original element.
         element.style.display = 'none';
+
+        // Prevent screen readers to read two elements.
+        element.setAttribute('aria-hidden', 'true');
     }
 
     get selectedOption () {
@@ -82,6 +85,7 @@ function setup (select) {
             // Add the class to selected option and closes de dropdown.
             select.selectValue(option.value);
             select.customOptions.classList.remove('show');
+            select.customLabel.classList.remove('active');
         });
 
         select.customOptions.append(optionElement);
@@ -92,11 +96,13 @@ function setup (select) {
     // Add event listener to show the options when clicked.
     select.customLabel.addEventListener('click', () => {
         select.customOptions.classList.toggle('show');
+        select.customLabel.classList.toggle('active');
     });
 
     // Close the dropdown when clicked outside of it.
     select.customElement.addEventListener('blur', () => {
         select.customOptions.classList.remove('show');
+        select.customLabel.classList.remove('active');
     });
 
     // Variables to select options with the letters pressed.
@@ -108,6 +114,7 @@ function setup (select) {
         switch (e.code) {
             case "Space":
                 select.customOptions.classList.toggle('show');
+                select.customLabel.classList.toggle('active');
                 break;
             
             case "ArrowUp": { 
@@ -129,6 +136,7 @@ function setup (select) {
             case "Enter":
             case "Escape":
                 select.customOptions.classList.remove('show');
+                select.customLabel.classList.remove('active');
                 break;
             
             default: {

@@ -1,11 +1,12 @@
 /*------------------------
 Custom Select - Stylesheet
-by Lucas Santana
+by Lucas Santana (b4tman)
 ------------------------*/
 /* Variables */
 :root {
     --cs-width: 200px;
-    --cs-height: 200px;
+    --cs-height: 30px;
+    --cs-inner-height: 200px;
 
     --cs-border: 1px solid black;
     --cs-border-radius: 5px;
@@ -55,7 +56,7 @@ by Lucas Santana
         width: 100%;
         border-top: none;
         background: var(--cs-background);
-        max-height: var(--cs-height);
+        max-height: var(--cs-inner-height);
         overflow-y: auto;
         border-bottom-left-radius: var(--cs-border-radius);
         border-bottom-right-radius: var(--cs-border-radius);
@@ -111,6 +112,7 @@ by Lucas Santana
         user-select: none;
         background-color: var(--cs-background);
         border-radius: var(--cs-border-radius);
+        height: var(--cs-height);
 
         &::after {
             content: '';
@@ -119,6 +121,18 @@ by Lucas Santana
             border-top-color: black;
             margin-top: 8px;
             margin-left: 12px;
+            transition: .3s;
+            /* Font Awesome Icons 
+            font-family: "Font Awesome 5 Pro"; 
+            font-weight: 900; 
+            content: "\f078";*/
+        
+        }
+
+        &.active::after {
+            transform: rotate(-180deg);
+            margin-top: -4px;
+            margin-right: 1px;
         }
     }
 }
